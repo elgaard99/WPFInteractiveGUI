@@ -20,6 +20,12 @@ namespace WPFInteractiveGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void UpdateCount()
+        {
+            lblIndexCount.Content = $"Index: {controller.PersonIndex}";
+            lblPersonCount.Content = $"Persons: {controller.PersonCount}";
+        }
+
         private Controller controller;
         public MainWindow()
         {
@@ -39,7 +45,7 @@ namespace WPFInteractiveGUI
             tbAge.IsEnabled = false;
             tbTelephoneNo.IsEnabled = false;
 
-
+            UpdateCount();
         }
 
         private void btnDeletePerson_click(object sender, RoutedEventArgs e)
@@ -71,6 +77,8 @@ namespace WPFInteractiveGUI
                 tbTelephoneNo.Clear();
             }
 
+            UpdateCount();
+
         }
 
         private void btnUp_click(object sender, RoutedEventArgs e)
@@ -81,6 +89,9 @@ namespace WPFInteractiveGUI
             tbLastName.Text = controller.CurrentPerson.LastName;
             tbAge.Text = controller.CurrentPerson.Age.ToString();
             tbTelephoneNo.Text = controller.CurrentPerson.TelephoneNo;
+
+            UpdateCount();
+
         }
 
         private void btnDown_click(object sender, RoutedEventArgs e)
@@ -91,6 +102,9 @@ namespace WPFInteractiveGUI
             tbLastName.Text = controller.CurrentPerson.LastName;
             tbAge.Text = controller.CurrentPerson.Age.ToString();
             tbTelephoneNo.Text = controller.CurrentPerson.TelephoneNo;
+
+            UpdateCount();
+
         }
 
         private void btnNewPerson_click(object sender, RoutedEventArgs e)
@@ -110,6 +124,8 @@ namespace WPFInteractiveGUI
             tbLastName.Clear();
             tbAge.Clear();
             tbTelephoneNo.Clear();
+
+            UpdateCount();
 
         }
 

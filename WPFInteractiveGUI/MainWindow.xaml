@@ -7,13 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="Index" Content="Index: " HorizontalAlignment="Left" Margin="300,92,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblPersonIdx" Content="{Binding PersonCount, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="350,92,0,0" VerticalAlignment="Top">
-            <Label.DataContext>
-                <local:Controller/>
-            </Label.DataContext>
-        </Label>
-        <Label Content="Person Count 0" HorizontalAlignment="Left" Margin="122,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblIndexCount" HorizontalAlignment="Left" Margin="300,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPersonCount" HorizontalAlignment="Left" Margin="122,92,0,0" VerticalAlignment="Top"/>
+
         <Label Content="FirstName" HorizontalAlignment="Left" Margin="127,152,0,0" VerticalAlignment="Top"/>
         <Label Content="LastName" HorizontalAlignment="Left" Margin="127,191,0,0" VerticalAlignment="Top"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="128,277,0,0" VerticalAlignment="Top"/>
